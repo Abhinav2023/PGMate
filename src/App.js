@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
+import ParticlesBg from "particles-bg";
+
 import { Route, Switch } from 'react-router-dom';
 
 import Header from './containers/Header';
 import Public from './App/Public';
 import User from './App/User';
 import ErrorMessage from './components/ErrorMessage';
-//import Banner from './components/Banner';
+import Banner from './components/Banner';
 import Body from './components/Body';
 import ProductView from './containers/public/ProductView';
 
@@ -37,7 +39,9 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
+		<div>
+			<ParticlesBg type="random" bg={true}/>
+			<React.Fragment>
         <Body>
           <Route
             path="/"
@@ -58,7 +62,14 @@ class App extends Component {
             />
           </Switch>
         </Body>
+		<Banner>
+          Made with
+          <span style={{ color: '#F6360B' }}> ❤️ </span>
+          by JaiHindCoders Team
+        </Banner>
       </React.Fragment>
+		</div>
+      
     );
   }
 }
