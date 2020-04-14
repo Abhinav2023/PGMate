@@ -34,6 +34,9 @@ const HeaderBar = props => (
     <StyledLink to="/">
       <Title>PGMate</Title>
     </StyledLink>
+	<StyledLink to="/help">
+      <Title>FAQs</Title>
+    </StyledLink>
     {props.children}
   </Header>
 );

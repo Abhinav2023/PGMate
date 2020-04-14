@@ -3,7 +3,7 @@ import firebase from 'firebase';
 import ParticlesBg from "particles-bg";
 
 import { Route, Switch } from 'react-router-dom';
-
+import FAQ from './components/FAQ';
 import Header from './containers/Header';
 import Public from './App/Public';
 import User from './App/User';
@@ -49,6 +49,7 @@ class App extends Component {
           />
           <Switch>
             <Route exact path="/" component={Public} />
+			 <Route exact path="/help" component={FAQ} /> 
             <Route
               path="/user"
               component={props => <User {...props} user={this.state.user} />}

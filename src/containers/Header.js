@@ -23,6 +23,7 @@ class Header extends React.Component {
     return (
       <HeaderBar>
         {this.props.user ? (
+				
           <React.Fragment>
             <DropDown
               handleMenu={this.handleMenu}
